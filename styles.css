@@ -1,92 +1,138 @@
 /* Reset */
-*,*::before, *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* General styles */
-body{
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 13px;
-    background-color: hsl(210, 46%, 95%);
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  background-color: hsl(210, 46%, 95%);
 }
 
-.container{
-    margin: 10% auto;
-    display: grid;
-    gap: 2em;
-    width: fit-content;
+.container {
+  margin: 10% auto;
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+  max-width: 20em;
 }
 
-article{
-    padding: 2em;
-    border-radius: 0.5em;
-    max-width: 20em;
+.testimonial {
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(100,100,0);
 }
 
-.profile{
-    display: flex;
-    margin-bottom: 1em;
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
 }
 
-img{
-    width: 2em;
-    border-radius: 50%;
-    margin-right: 1em;
+
+
+.profile {
+  display: flex;
+  margin-bottom: 1em;
 }
 
-.quote{
-    background-image:url("bg-pattern-quotation.svg");
-    width: fit-content;
-    border-radius: 0.5em;
+img {
+  height: 2em;
+  border-radius: 50%;
+  margin-right: 1em;
 }
 
-.daniel{
-    background-image:url("bg-pattern-quotation.svg");
-    background-color: hsl(263, 55%, 52%);
+.quote {
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
 }
 
-.jonathan{
-    background-color: hsl(217, 19%, 35%);
+.daniel {
+  background-color: hsl(263, 55%, 52%);
 }
 
-.patrick{
-    background-color: hsl(219, 29%, 14%);
+.jonathan {
+  background-color: hsl(217, 19%, 35%);
 }
 
-.jeanette,.kira{
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(219, 29%, 14%);
+.patrick {
+  background-color: hsl(219, 29%, 14%);
 }
 
-.daniel, .jonathan, .patrick{
-    color: hsl(0, 0%, 100%);
+.jeanette,
+.kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
 }
 
-.review-header{
-    font-weight: 600;
-    font-size: 16px;
-    display: block;
-    margin-bottom: 1em;
+.daniel,
+.jonathan,
+.patrick {
+  color: hsl(0, 0%, 100%);
 }
 
-.review, .verified{
-    font-size: 10px;
+.review-header {
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 1em;
 }
 
-.darker{
-    color:hsla(219, 29%, 14%,0.7);
+.review,
+.verified {
+  font-size: 10px;
 }
 
-.lighter{
-    color:hsl(0, 0%, 100%,0.7);
+.darker {
+  color: hsla(219, 29%, 14%, 0.7);
 }
 
-.dark{
-    color:hsla(219, 29%, 14%,0.5);
+.lighter {
+  color: hsl(0, 0%, 100%, 0.7);
 }
 
-.light{
-    color:hsl(0, 0%, 100%,0.5);
+.dark {
+  color: hsla(219, 29%, 14%, 0.5);
+}
+
+.light {
+  color: hsl(0, 0%, 100%, 0.5);
+}
+/* Responsiveness for tablet */
+@media screen and (min-width: 600px){
+    .container{
+        max-width: 40em;
+    }
+}
+
+/* Responsiveness for desktop */
+@media screen and (min-width: 1000px) {
+  .container {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+    max-width: 70em;
+  }
 }
