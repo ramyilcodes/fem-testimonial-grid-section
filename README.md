@@ -38,6 +38,11 @@ Users should be able to:
 - Mobile-first workflow
 
 
+### Useful resources
+
+- [Kevin Powell](https://youtu.be/rg7Fvvl3taU) - This helped me learn the basics os CSS grid. Plus he used the same challenge for the tutorial so I was able to follow along nicely.
+
+
 ## Author
 
 - Frontend Mentor - [@ramyilcodes](https://www.frontendmentor.io/profile/ramyilcodes)
