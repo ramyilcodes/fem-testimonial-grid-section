@@ -14,6 +14,10 @@ body {
   background-color: hsl(210, 46%, 95%);
 }
 
+h1{
+  display: none;
+}
+
 .container {
   margin: 10% auto;
   display: grid;
